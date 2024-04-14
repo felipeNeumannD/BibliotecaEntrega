@@ -1,0 +1,40 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 6 de abr. de 2024, 21:05:11
+    Author     : Felipe
+*/
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Faz com que a altura mínima seja a altura da tela */
+}
+        .form-box {
+            width: 100%;
+            max-width: 500px; /* Largura máxima do formulário */
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-box h3 {
+            margin-bottom: 20px;
+        }
+        .form-box input[type="text"], 
+        .form-box input[type="submit"] {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .form-box input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: 0;
+        }
+

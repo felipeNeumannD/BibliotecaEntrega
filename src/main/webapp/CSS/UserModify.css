@@ -1,0 +1,24 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 de abr. de 2024, 17:16:37
+    Author     : Felipe
+*/
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding-top: 20px;
+}
+.custom-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.submit-btn-container {
+    text-align: right;
+}
