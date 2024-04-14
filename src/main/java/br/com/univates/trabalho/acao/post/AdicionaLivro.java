@@ -19,7 +19,7 @@ public class AdicionaLivro implements Acao {
 
     @Override
     public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String nome = (String) request.getParameter("nome");
+    String nome = (String) request.getParameter("nome");
 	String paginas =  (String) request.getParameter("paginas");
 	LivroService liv = new LivroService();
 	liv.adicionar(nome, Integer.parseInt(paginas));
