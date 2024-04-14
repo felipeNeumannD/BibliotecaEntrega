@@ -32,7 +32,9 @@ public class Close {
             throw new RuntimeException(e);
         }
     }
-    
+
+
+
     public static void closeStatements(PreparedStatement prepared, ResultSet resultSet) {
     	 try {
 			prepared.close();
