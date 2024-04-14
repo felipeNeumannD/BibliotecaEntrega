@@ -1,6 +1,5 @@
-A aplicação em questã se resume a uma biblioteca onde você pode alugar livros, fazer a devolução e ver o histórico dos mesmos. Além disso, a aplicação tem uma página de login para o usuário, além da implementação de CRUD, tanto para os usuários quanto os livros,
-que podem ser alterados removido , adicionados e lidos. Falando sobre a estrutura do projeto, ele se resume a três camadas, a camada DAO, que é referente ao banco de dados, a service, onde a responsabilidade é executar de forma apropriada a camada DAO considerando informações
-da camada acima, e por fim a camada de web services, onde estão as ações, que pegam dados das páginas web e trazem até a camada service.
+A aplicação em questão se resume a uma biblioteca onde você pode alugar livros, fazer a devolução e ver o histórico dos mesmos. Além disso, a aplicação tem uma página de login para o usuário, além da implementação de CRUD, tanto para os usuários quanto os livros,
+que podem ser alterados, removidos, adicionados e lidos. Falando sobre a estrutura do projeto, ele se resume a três camadas, a camada DAO, que é referente ao banco de dados, a service, onde a responsabilidade é executar de forma apropriada a camada DAO considerando informações da camada acima, e por fim a camada de web services, onde estão as ações, que pegam dados das páginas web e trazem até a camada service.
 
 
 Instalação do Projeto:
