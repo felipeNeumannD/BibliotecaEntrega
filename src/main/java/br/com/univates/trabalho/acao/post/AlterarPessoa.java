@@ -43,12 +43,8 @@ public class AlterarPessoa implements Acao{
         } catch (RepeatedException ex) {
             Logger.getLogger(AlterarPessoa.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
-        
-        
-        
+
+
         sessao.removeAttribute("pessoaParaAlterar");
        
         pes.setCelular(celular);

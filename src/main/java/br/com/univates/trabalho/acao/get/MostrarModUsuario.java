@@ -33,7 +33,6 @@ public class MostrarModUsuario implements Acao{
         try {
             PessoaService pessoaService = new PessoaService();
             Pessoa pes = pessoaService.procurar(id);
-//            request.setAttribute("pessoaParaAlterar", pes);
             sessao.setAttribute("pessoaParaAlterar", pes);
             
             RequestDispatcher dispatcher = request.getRequestDispatcher("/formAlterarUsuario.jsp");
