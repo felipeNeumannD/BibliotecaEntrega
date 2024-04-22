@@ -16,6 +16,8 @@ import java.sql.DriverManager;
 import br.com.univates.trabalho.model.Pessoa;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -34,8 +36,8 @@ public class PessoaDao implements Crud<Pessoa>, StatementSetter<PreparedStatemen
         PreparedStatement statement = conn.prepareStatement(sql);
         adderStatementPlus(statement, pessoa);
         Close.closeConnection(conn);
-
     }
+    
     @Override
     public void alterar(Pessoa pessoa) throws RepeatedException {
         String sql = String.format("update pessoa set nome = ?, senhar = ?, email = ?, cpf = ?, celular = ?  where id_pessoa = %d and ativo = True", pessoa.getId_pessoa());
@@ -146,6 +148,14 @@ public class PessoaDao implements Crud<Pessoa>, StatementSetter<PreparedStatemen
         }
     }
     
+    public List<Pessoa> todos() throws SQLException{
+        String sql = "select * from pessoa";
+        PreparedStatement preparedStatement = conn.prepareStatement(sql);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        List<Pessoa> pessoas = readerStatementList(resultSet);
+        return pessoas;
+    }
+    
     public Pessoa Newread(Integer numero) throws NotFoundException {
         String sql = "select nome, senhar, email, cpf, celular from pessoa where id_pessoa = ? and ativo = True";
         try {
@@ -176,6 +186,26 @@ public class PessoaDao implements Crud<Pessoa>, StatementSetter<PreparedStatemen
                 throw new NotFoundException();
             }
         } catch (SQLException | NotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    
+    
+    public List<Pessoa> readerStatementList(ResultSet resultSet) {
+        try {
+            List<Pessoa> pessoas = new ArrayList<>();
+            while(resultSet.next()){
+                int id = resultSet.getInt(1);
+                String nome = resultSet.getString(2);
+                String senhar = resultSet.getString(3);
+                String email =  resultSet.getString(4);
+                String cpf = resultSet.getString(5);
+                String celular = resultSet.getString(6);
+                Pessoa pessoa = new Pessoa(id, nome, senhar, email, cpf, celular);
+                pessoas.add(pessoa);
+            } 
+            return pessoas;
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }

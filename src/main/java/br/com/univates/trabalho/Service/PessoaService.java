@@ -10,6 +10,7 @@ import br.com.univates.trabalho.dao.PessoaDao;
 import br.com.univates.trabalho.dao.RepeatedException;
 import br.com.univates.trabalho.model.Pessoa;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  *
@@ -79,6 +80,11 @@ public class PessoaService {
     public Pessoa validarUsuario(String email, String senha) throws NotFoundException {
     	Pessoa pessoad = dao.readEntrada(email, senha);
     	return pessoad;
+    }
+    
+    public List<Pessoa> verTodos() throws SQLException{
+        List<Pessoa> pessoas = dao.todos();
+        return pessoas;
     }
 
 

@@ -11,6 +11,7 @@ br\com\univates\trabalho\dao\AluguelDao.class
 br\com\univates\trabalho\acao\post\Alugar.class
 br\com\univates\trabalho\JakartaRestConfiguration.class
 br\com\univates\trabalho\model\Aluguel.class
+br\com\univates\trabalho\WS\ApplicationConfig.class
 br\com\univates\trabalho\acao\post\CriarConta.class
 br\com\univates\trabalho\dao\PessoaDao.class
 br\com\univates\trabalho\acao\Executer.class
@@ -20,6 +21,7 @@ br\com\univates\trabalho\dao\TimeTransformer.class
 br\com\univates\trabalho\resources\JakartaEE10Resource.class
 br\com\univates\trabalho\acao\post\AlteraLivro.class
 br\com\univates\trabalho\dao\Crud.class
+br\com\univates\trabalho\WS\WebService.class
 br\com\univates\trabalho\acao\get\MostrarModUsuario.class
 br\com\univates\trabalho\model\dto\NumeroDto.class
 br\com\univates\trabalho\acao\post\ExcluiLivro.class
@@ -33,6 +35,7 @@ br\com\univates\trabalho\dao\Close.class
 br\com\univates\trabalho\dao\NotFoundException.class
 br\com\univates\trabalho\Service\LivroService.class
 br\com\univates\trabalho\Service\PessoaService.class
+br\com\univates\trabalho\WS\WebService$1.class
 br\com\univates\trabalho\model\dto\AluguelPesquisaDTO.class
 br\com\univates\trabalho\acao\get\ModificaLivro.class
 br\com\univates\trabalho\acao\post\Logout.class
